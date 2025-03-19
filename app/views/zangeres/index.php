@@ -11,10 +11,6 @@
                 <th>Land</th>
                 <th>Mobiel</th>
                 <th>Leeftijd</th>
-                <th>Status</th>
-                <th>Opmerking</th>
-                <th>Aangemaakt</th>
-                <th>Gewijzigd</th>
             </tr>
         </thead>
         <tbody>
