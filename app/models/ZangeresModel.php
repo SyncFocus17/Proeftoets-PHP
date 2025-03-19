@@ -17,11 +17,7 @@ class ZangeresModel
                     Nettowaarde,
                     Land,
                     Mobiel,
-                    Leeftijd,
-                    IsActief,
-                    Opmerking,
-                    DatumAangemaakt,
-                    DatumGewijzigd
+                    Leeftijd
                 FROM 
                     Zangeres 
                 ORDER BY 

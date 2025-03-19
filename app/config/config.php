@@ -11,7 +11,7 @@ define('DB_PASS', '');
 /**
  * De naam van de virtualhost
  */
-define('URLROOT', 'kevin-php.gg');
+define('URLROOT', 'localhost');
 
 /**
  * Het pad naar de folder app

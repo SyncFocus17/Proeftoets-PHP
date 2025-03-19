@@ -1,6 +1,5 @@
 <?php require_once APPROOT . '/views/includes/header.php'; ?>
 
-<!-- Voor het centreren van de container gebruiken we het boorstrap grid -->
 <div class="container">
     <div class="row mt-3">
 
