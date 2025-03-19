@@ -1,0 +1,33 @@
+<?php
+
+class ZangeresModel
+{
+    private $db;
+
+    public function __construct()
+    {
+        $this->db = new Database();
+    }
+
+    public function getZangeresData()
+    {
+        $sql = "SELECT 
+                    Id,
+                    Naam,
+                    Nettowaarde,
+                    Land,
+                    Mobiel,
+                    Leeftijd,
+                    IsActief,
+                    Opmerking,
+                    DatumAangemaakt,
+                    DatumGewijzigd
+                FROM 
+                    Zangeres 
+                ORDER BY 
+                    Leeftijd DESC";
+
+        $this->db->query($sql);
+        return $this->db->resultSet();
+    }
+}
