@@ -21,10 +21,6 @@
                     <td><?= htmlspecialchars($zangeres->Land); ?></td>
                     <td><?= htmlspecialchars($zangeres->Mobiel); ?></td>
                     <td><?= htmlspecialchars($zangeres->Leeftijd); ?></td>
-                    <td><?= $zangeres->IsActief ? 'Actief' : 'Inactief'; ?></td>
-                    <td><?= htmlspecialchars($zangeres->Opmerking ?? ''); ?></td>
-                    <td><?= htmlspecialchars($zangeres->DatumAangemaakt); ?></td>
-                    <td><?= htmlspecialchars($zangeres->DatumGewijzigd); ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
