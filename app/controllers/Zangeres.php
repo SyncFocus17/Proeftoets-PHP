@@ -12,7 +12,7 @@ class Zangeres extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Overzicht Zangeressen:',
+            'title' => 'Top 5 rijkste Zangeressen ter wereld:',
             'zangeressen' => $this->zangeresModel->getZangeresData()
         ];
 

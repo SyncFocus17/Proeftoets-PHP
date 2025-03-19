@@ -1,6 +1,6 @@
 -- Step: 01
 -- ***************************************************************
--- Doel : Maak een nieuwe database aan met de naam Mvc_smartphone_2408B
+-- Doel : Maak een nieuwe database aan met de naam s5_php
 -- ***************************************************************
 -- Versie       Datum           Auteur              Omschrijving
 -- ******       *****           ******              ************
@@ -8,13 +8,13 @@
 -- ***************************************************************
 
 -- Verwijder database Mvc_smartphone_2408B
-DROP DATABASE IF EXISTS `Mvc_smartphone_2408B`;
+DROP DATABASE IF EXISTS `s5_php`;
 
 -- Maak een nieuwe database aan Mvc_smartphone_2408B
 CREATE DATABASE `Mvc_smartphone_2408B`;
 
 -- Gebruik database Mvc_smartphone_2408B
-USE `Mvc_smartphone_2408B`;
+USE `s5_php`;
 
 -- Step: 02
 -- ***************************************************************
@@ -310,45 +310,30 @@ VALUES
 -- Onderstaande velden zelf toevoegen aan de tabel Zangeres
 -- *****************************************************************************************************
 
-CREATE TABLE Zangeres
+DROP TABLE IF EXISTS Zangeres;
+
+CREATE TABLE IF NOT EXISTS Zangeres
 (
      Id                 SMALLINT        UNSIGNED    NOT NULL        AUTO_INCREMENT
     ,Naam               VARCHAR(50)                 NOT NULL
     ,Nettowaarde        SMALLINT        UNSIGNED    NOT NULL
-    ,Land               VARCHAR(50 )                NOT NULL
+    ,Land               VARCHAR(50)                 NOT NULL
     ,Mobiel             VARCHAR(30)                 NOT NULL
     ,Leeftijd           TINYINT         UNSIGNED    NOT NULL
-    ,IsActief           BIT                         NOT NULL        DEFAULT 1
-    ,Opmerking          VARCHAR(255)                    NULL        DEFAULT NULL
-    ,DatumAangemaakt    DATETIME(6)                 NOT NULL
-    ,DatumGewijzigd     DATETIME(6)                 NOT NULL
-    ,CONSTRAINT         PK_Zangeres_Id              PRIMARY KEY     CLUSTERED(Id)
+    ,CONSTRAINT         PK_Zangeres_Id              PRIMARY KEY     (Id)
 ) ENGINE=InnoDB;
-
--- Step: 13
--- *****************************************************************
--- Doel : Vul de tabel Zangeres met gegevens
--- *****************************************************************
--- Versie       Datum           Auteur              Omschrijving
--- ******       *****           ******              ************
--- 01           18-3-2025      Arjan de Ruijter     Vulling Zangeres
--- *****************************************************************
 
 INSERT INTO Zangeres
 (
-      Naam
-     ,Nettowaarde
-     ,Land
-     ,Mobiel
-     ,Leeftijd
-     ,IsActief
-     ,Opmerking
-     ,DatumAangemaakt
-     ,DatumGewijzigd
+     Naam
+    ,Nettowaarde
+    ,Land
+    ,Mobiel
+    ,Leeftijd
 )
 VALUES
-  ('Rihanna', 1400,'Barbados', '+1246 2400 1862400', 36, 1, NULL, SYSDATE(6), SYSDATE(6))
- ,('Madonna', 575,'Verenigde Staten', '+13425 182345', 65, 1, NULL, SYSDATE(6), SYSDATE(6))
- ,('Taylor Swift', 570,'Verenigde Staten', '+13421 231356', 34, 1, NULL, SYSDATE(6), SYSDATE(6))
- ,('Beyoncé', 420,'Verenigde Staten', '+18723 213481', 41, 1, NULL, SYSDATE(6), SYSDATE(6))
- ,('Jennifer Lopez', 400,'Verenigde Staten', '+16254 751243', 54, 1, NULL, SYSDATE(6), SYSDATE(6));
+  ('Rihanna', 1400, 'Barbados', '+1246 2400 1862400', 36),
+  ('Madonna', 575, 'Verenigde Staten', '+13425 182345', 65),
+  ('Taylor Swift', 570, 'Verenigde Staten', '+13421 231356', 34),
+  ('Beyoncé', 420, 'Verenigde Staten', '+18723 213481', 41),
+  ('Jennifer Lopez', 400, 'Verenigde Staten', '+16254 751243', 54);
